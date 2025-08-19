@@ -16,7 +16,7 @@ export const FeaturesSection = () => {
     {
       icon: <Users className="w-8 h-8 text-primary" />,
       title: "14 Google-аккаунтов",
-      description: "Уникальные аккаунты с IP-адресами из Казахстана для естественного тестирования"
+      description: "Уникальные аккаунты с разными IP-адресами для естественного тестирования"
     },
     {
       icon: <Clock className="w-8 h-8 text-success" />,

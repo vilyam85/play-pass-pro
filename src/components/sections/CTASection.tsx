@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { PhoneReveal } from "@/components/ui/PhoneReveal";
 import { Mail, MessageCircle, Phone } from "lucide-react";
 export const CTASection = () => {
   return <section className="py-20 bg-gradient-hero text-primary-foreground">
@@ -42,7 +43,7 @@ export const CTASection = () => {
               <CardContent className="p-6 text-center">
                 <Phone className="w-8 h-8 mx-auto mb-3 text-success" />
                 <h3 className="font-semibold mb-2 text-white">WhatsApp</h3>
-                <p className="text-white/80 text-sm">+7 XXX XXX XX XX</p>
+                <PhoneReveal phone="+79014541501" className="text-white/80 text-sm justify-center" />
               </CardContent>
             </Card>
           </div>

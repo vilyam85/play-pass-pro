@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import { PhoneReveal } from "@/components/ui/PhoneReveal";
 import { ExternalLink } from "lucide-react";
 export const Footer = () => {
   return <footer className="py-12 bg-muted/30 border-t">
@@ -34,7 +35,10 @@ export const Footer = () => {
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p>📧 Email: mobileapptest@yandex.ru</p>
                 <p>📱 Telegram: @mobileapptg</p>
-                <p>📞 WhatsApp: +7 XXX XXX XX XX</p>
+                <div className="flex items-center gap-2">
+                  <span>📞 WhatsApp:</span>
+                  <PhoneReveal phone="+79014541501" />
+                </div>
               </div>
             </div>
           </div>
