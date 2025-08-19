@@ -2,6 +2,11 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-testing.jpg";
 
 export const HeroSection = () => {
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    pricingSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero text-primary-foreground overflow-hidden">
       <div className="absolute inset-0 bg-black/20" />
@@ -28,6 +33,7 @@ export const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
               size="lg" 
+              onClick={scrollToPricing}
               className="bg-success hover:bg-success/90 text-success-foreground shadow-success text-lg px-8 py-4"
             >
               Заказать тестирование

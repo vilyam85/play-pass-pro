@@ -11,8 +11,7 @@ export const CTASection = () => {
             Готовы пройти модерацию Google Play?
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Закажите профессиональное тестирование прямо сейчас и получите 
-            гарантированный результат за фиксированную стоимость
+            Свяжитесь с нами для заказа профессионального тестирования
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -20,7 +19,7 @@ export const CTASection = () => {
               size="lg" 
               className="bg-success hover:bg-success/90 text-success-foreground shadow-success text-lg px-8 py-4"
             >
-              Заказать тестирование
+              Написать в Telegram
             </Button>
             <Button 
               variant="outline" 
@@ -36,7 +35,7 @@ export const CTASection = () => {
               <CardContent className="p-6 text-center">
                 <Mail className="w-8 h-8 mx-auto mb-3 text-success" />
                 <h3 className="font-semibold mb-2 text-white">Email</h3>
-                <p className="text-white/80 text-sm">contact@example.com</p>
+                <p className="text-white/80 text-sm">mobileapptest@yandex.ru</p>
               </CardContent>
             </Card>
             
@@ -44,7 +43,7 @@ export const CTASection = () => {
               <CardContent className="p-6 text-center">
                 <MessageCircle className="w-8 h-8 mx-auto mb-3 text-success" />
                 <h3 className="font-semibold mb-2 text-white">Telegram</h3>
-                <p className="text-white/80 text-sm">@yourtelegram</p>
+                <p className="text-white/80 text-sm">@apptestpro</p>
               </CardContent>
             </Card>
             
