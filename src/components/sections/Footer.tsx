@@ -1,9 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { ExternalLink } from "lucide-react";
-
 export const Footer = () => {
-  return (
-    <footer className="py-12 bg-muted/30 border-t">
+  return <footer className="py-12 bg-muted/30 border-t">
       <div className="container px-4">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -35,7 +33,7 @@ export const Footer = () => {
               <h3 className="font-semibold mb-4">Контакты</h3>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p>📧 Email: mobileapptest@yandex.ru</p>
-                <p>📱 Telegram: @apptestpro</p>
+                <p>📱 Telegram: @mobileapptg</p>
                 <p>📞 WhatsApp: +7 XXX XXX XX XX</p>
               </div>
             </div>
@@ -53,6 +51,5 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
