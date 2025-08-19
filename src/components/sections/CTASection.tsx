@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, MessageCircle, Phone } from "lucide-react";
-
 export const CTASection = () => {
-  return (
-    <section className="py-20 bg-gradient-hero text-primary-foreground">
+  return <section className="py-20 bg-gradient-hero text-primary-foreground">
       <div className="container px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -15,17 +13,10 @@ export const CTASection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button 
-              size="lg" 
-              className="bg-success hover:bg-success/90 text-success-foreground shadow-success text-lg px-8 py-4"
-            >
+            <Button size="lg" className="bg-success hover:bg-success/90 text-success-foreground shadow-success text-lg px-8 py-4">
               Написать в Telegram
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4"
-            >
+            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4">
               Задать вопрос
             </Button>
           </div>
@@ -43,7 +34,7 @@ export const CTASection = () => {
               <CardContent className="p-6 text-center">
                 <MessageCircle className="w-8 h-8 mx-auto mb-3 text-success" />
                 <h3 className="font-semibold mb-2 text-white">Telegram</h3>
-                <p className="text-white/80 text-sm">@apptestpro</p>
+                <p className="text-white/80 text-sm">@mobileapptg</p>
               </CardContent>
             </Card>
             
@@ -57,6 +48,5 @@ export const CTASection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
