@@ -37,21 +37,6 @@ export const ReviewsSection = () => {
               </Button>
             </CardContent>
           </Card>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-success mb-2">50+</div>
-              <div className="text-white/90">Успешных проектов</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-success mb-2">100%</div>
-              <div className="text-white/90">Положительные отзывы</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-success mb-2">24/7</div>
-              <div className="text-white/90">Поддержка клиентов</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

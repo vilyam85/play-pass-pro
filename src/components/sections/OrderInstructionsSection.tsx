@@ -3,6 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export const OrderInstructionsSection = () => {
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    pricingSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const steps = [
     {
       number: "1",
@@ -72,6 +77,7 @@ export const OrderInstructionsSection = () => {
                 <p className="mb-4">Вы получите ссылку на тестирование в личном сообщении</p>
                 <Button 
                   size="lg" 
+                  onClick={scrollToPricing}
                   className="bg-white text-success hover:bg-white/90 shadow-lg"
                 >
                   Заказать сейчас
