@@ -84,7 +84,11 @@ export const PricingSection = () => {
                 </li>
               </ul>
               
-              <Button variant="outline" className="w-full text-lg py-3">
+              <Button 
+                variant="outline" 
+                className="w-full text-lg py-3"
+                onClick={() => window.open('https://kwork.ru/mobile-apps/43916279/zakrytoe-testirovanie-google-play-ot-mobile-razrabotchika', '_blank')}
+              >
                 Заказать через Kwork за 3500₽
               </Button>
             </CardContent>

@@ -17,7 +17,12 @@ export const CTASection = () => {
             <Button size="lg" className="bg-success hover:bg-success/90 text-success-foreground shadow-success text-lg px-8 py-4">
               Написать в Telegram
             </Button>
-            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-white text-white bg-white/10 hover:bg-white/20 text-lg px-8 py-4"
+              onClick={() => window.location.href = 'mailto:mobileapptest@yandex.ru?subject=Вопрос по тестированию приложений'}
+            >
               Задать вопрос
             </Button>
           </div>

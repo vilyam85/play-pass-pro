@@ -7,6 +7,11 @@ export const HeroSection = () => {
     pricingSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToTimeline = () => {
+    const timelineSection = document.getElementById('timeline');
+    timelineSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero text-primary-foreground overflow-hidden">
       <div className="absolute inset-0 bg-black/20" />
@@ -41,7 +46,8 @@ export const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4"
+              onClick={scrollToTimeline}
+              className="border-white text-white bg-white/10 hover:bg-white/20 text-lg px-8 py-4"
             >
               Узнать подробности
             </Button>

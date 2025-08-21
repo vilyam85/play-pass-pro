@@ -31,6 +31,7 @@ export const ReviewsSection = () => {
               <Button 
                 size="lg" 
                 className="bg-white text-primary hover:bg-white/90"
+                onClick={() => window.open('https://kwork.ru/mobile-apps/43916279/zakrytoe-testirovanie-google-play-ot-mobile-razrabotchika', '_blank')}
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Смотреть отзывы и примеры →
