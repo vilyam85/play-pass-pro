@@ -49,7 +49,7 @@ export const Footer = () => {
             <p className="text-sm text-muted-foreground mb-2">
               <strong>Важно:</strong> При заказе через Kwork действуют правила платформы Kwork
             </p>
-            <p className="text-xs text-muted-foreground">© 2025 AppTestPro. Все права защищены.</p>
+            <p className="text-xs text-muted-foreground">© 2025 MobileAppTest. Все права защищены.</p>
           </div>
         </div>
       </div>
