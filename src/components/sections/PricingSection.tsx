@@ -1,8 +1,31 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, Star, Shield } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Check, Star, Shield, Copy, Smartphone } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 export const PricingSection = () => {
+  const [isPaymentDialogOpen, setIsPaymentDialogOpen] = useState(false);
+  const { toast } = useToast();
+
+  const copyPhoneNumber = async () => {
+    const phoneNumber = "+79019504450";
+    try {
+      await navigator.clipboard.writeText(phoneNumber);
+      toast({
+        title: "Номер скопирован",
+        description: "Номер телефона скопирован в буфер обмена",
+      });
+    } catch (err) {
+      toast({
+        title: "Ошибка копирования",
+        description: "Не удалось скопировать номер телефона",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <section id="pricing" className="py-20 bg-muted/30">
       <div className="container px-4">
@@ -47,9 +70,70 @@ export const PricingSection = () => {
                 </li>
               </ul>
               
-              <Button className="w-full bg-success hover:bg-success/90 text-success-foreground text-lg py-3">
-                Заказать напрямую за 3200₽
-              </Button>
+              <Dialog open={isPaymentDialogOpen} onOpenChange={setIsPaymentDialogOpen}>
+                <DialogTrigger asChild>
+                  <Button className="w-full bg-success hover:bg-success/90 text-success-foreground text-lg py-3">
+                    Заказать напрямую за 3200₽
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle className="text-center text-xl font-bold">
+                      Оплата услуг тестирования
+                    </DialogTitle>
+                  </DialogHeader>
+                  <div className="space-y-6">
+                    {/* СБП Logo/Icon */}
+                    <div className="flex justify-center">
+                      <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-lg flex items-center gap-2">
+                        <Smartphone className="w-6 h-6" />
+                        СБП
+                      </div>
+                    </div>
+                    
+                    {/* Phone Number */}
+                    <div className="text-center space-y-2">
+                      <p className="text-sm text-muted-foreground">Номер телефона для перевода:</p>
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="text-2xl font-bold text-primary">+79019504450</span>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={copyPhoneNumber}
+                          className="p-2"
+                        >
+                          <Copy className="w-4 h-4" />
+                        </Button>
+                      </div>
+                    </div>
+                    
+                    {/* Amount */}
+                    <div className="text-center">
+                      <p className="text-sm text-muted-foreground mb-1">Сумма к оплате:</p>
+                      <div className="text-3xl font-bold text-success">3 200 ₽</div>
+                    </div>
+                    
+                    {/* Instructions */}
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <p className="text-sm font-medium text-center">
+                        В назначении платежа укажите:
+                      </p>
+                      <p className="text-center font-bold text-primary mt-1">
+                        "оплата услуг тестирования"
+                      </p>
+                    </div>
+                    
+                    {/* Close Button */}
+                    <Button 
+                      variant="outline" 
+                      className="w-full"
+                      onClick={() => setIsPaymentDialogOpen(false)}
+                    >
+                      Закрыть
+                    </Button>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </CardContent>
           </Card>
           
